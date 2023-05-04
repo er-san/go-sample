@@ -15,6 +15,8 @@ terraform-apply:
 	terraform -chdir=terraform apply
 terraform-init:
 	terraform -chdir=terraform init
+terraform-output:
+	terraform -chdir=terraform output
 terraform-plan:
 	terraform -chdir=terraform plan
 terraform-destroy:
