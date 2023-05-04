@@ -60,7 +60,6 @@ func TestSecretRoute(t *testing.T) {
 		t.Errorf("expected error to be nil got %v", err)
 	}
 
-	// top secret route firing off random number(%d) of times!!!\n", n)
 	if string(data) != getTestSecretRouteExpected() {
 		t.Errorf("test expected %v got %v", getTestSecretRouteExpected(), string(data))
 	}

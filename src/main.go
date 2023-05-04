@@ -27,7 +27,6 @@ func secret_route_print(n int) {
 func secret_route(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Header().Set("Content-Type", "text/plain")
-	// w.Write([]byte("Hello there, \nWelcome to the best website ever!"))
 	for i := 0; i < rand.Intn(10); i++ {
 		go secret_route_print(i)
 	}
