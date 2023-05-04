@@ -49,9 +49,9 @@ func getTestSecretRouteExpected() string {
 }
 
 func TestSecretRoute(t *testing.T) {
-	req := httptest.NewRequest(http.MethodGet, "/health", nil)
+	req := httptest.NewRequest(http.MethodGet, "/secret_route", nil)
 	w := httptest.NewRecorder()
-	base(w, req)
+	secret_route(w, req)
 	res := w.Result()
 	defer res.Body.Close()
 

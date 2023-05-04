@@ -27,10 +27,10 @@ func secret_route_print(n int) {
 func secret_route(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Header().Set("Content-Type", "text/plain")
+	w.Write([]byte("secret route initiated"))
 	for i := 0; i < rand.Intn(10); i++ {
 		go secret_route_print(i)
 	}
-	w.Write([]byte("secret route initiated"))
 }
 
 func base(w http.ResponseWriter, r *http.Request) {
